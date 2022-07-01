@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <!--
+			Welcome to Project-S's website!
+			ソースを見ても面白いものはありませんよ。
+            コード書くのが下手なのは許してください。
+            改行はC#の癖なので気にしないでください。
+            コメントで解説してるので参考にどうぞ。
+		-->
+        <link rel="stylesheet" type="text/css" href="style_normal.css">
+        <meta charset="utf-8">
+        
+        
+        
+        
+        
+        
+        <title>
+            ようこそ！
+        </title>
+        
+    </head>
+    <body>
+        <div class="header">
+			<div class="site_logo">
+				<a href="/"><img src="/img/logo.png"></a>
+			</div>
+			<div class="site">
+					<h1>
+                        Project-S's site
+                    </h1>
+			</div>
+			<div class="info">
+                <h2 id="RealtimeClock">
+                    Loading...
+                </h2>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+        <!--ダークモードチェックボックス-->
+        <input id="darkmode" type="checkbox"> ダークモード
+        <h2>
+            super homepage.
+            <br>
+            ↑???????
+        </h2>
+
+
+
+
+
+
+
+
+        <script>//ダークモード
+            //チェックボックスの取得
+            const check = document.querySelector("#darkmode");
+            //チェックした時
+            check.addEventListener("change", () => 
+            {
+                if (check.checked == true)
+                {//ダークモード
+                    document.body.classList.remove("lighttheme");
+                    document.body.classList.add("darktheme");
+                }
+                else
+                {//ライトモード
+                    document.body.classList.remove("darktheme");
+                    document.body.classList.add("lighttheme");
+                }
+            });
+        </script>
+        <script>//時計
+            function Puls0(Num) 
+            {
+                var NewNum;
+                if(Num < 10)
+                {// 桁数が1桁だったら先頭に0を加えて2桁に調整する
+                    NewNum = "0" + Num;
+                }
+                else 
+                { 
+                    NewNum = Num; 
+                }
+                return NewNum;
+            }
+            function ShowClock() 
+            {
+                var NowTime = new Date();
+                var NowTimeHour = Puls0(NowTime.getHours());
+                var NowTimeMin  = Puls0(NowTime.getMinutes());
+                var NowTimeSec  = Puls0(NowTime.getSeconds());
+                var NowTimeString = "NowTime:" + NowTimeHour + ":" + NowTimeMin + ":" + NowTimeSec;
+                document.getElementById("RealtimeClock").innerHTML = NowTimeString;
+            }
+            setInterval('ShowClock()',1000);//繰り返し(1000ms)
+        </script>
+    </body>
+</html>
