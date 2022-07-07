@@ -2,29 +2,50 @@
 <html lang="ja">
     <head>
         <!--
-			Welcome to Project-S's website!
-			ソースを見ても面白いものはありませんよ。
+			Welcome to Project-S's website!!!!!!!
+			ソースを見てもなにもありませんよ(多分)。
             コード書くのが下手なのは許してください。
             改行はC#の癖なので気にしないでください。
-            コメントで解説してるので参考にどうぞ。
+            コメントで解説してるので参考？にどうぞ。
 		-->
-        <link rel="stylesheet" type="text/css" href="style_normal.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="utf-8">
-        
-        
-        
-        
-        
-        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--サーバーに公開した時
+            <meta property="og:url" content="https://projects31415.jp/index.html">
+        -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Project-S's website">
+        <meta property="og:description" content="Project-S's website.">
+        <meta property="og:site_name" content="">
+        <meta property="og:image" content="">
+        <meta property="og:locate" content="ja_JP">
+        <meta property="twitter:card" content="">
+        <meta property="twitter:site" content="ProjectS31415_1">
         <title>
-            ようこそ！
+            ようこそ！@Project-S's website
         </title>
-        
     </head>
     <body>
         <div class="header">
-			<div class="site_logo">
-				<a href="/"><img src="/img/logo.png"></a>
+            <div class="header__inner">
+            <img class="header__logo" src="https://placehold.jp/bbbbbb/ffffff/100x35.png?text=LOGO">
+            <div class="header__navgroup">
+            <div class="header__navitem">TOP</div>
+            <div class="header__navitem">ABOUT</div>
+            <div class="header__navitem">BLOG</div>
+            <div class="header__navitem">CONTACT</div>
+            </div>
+            </div>
+            </div>
+
+
+            
+        <div class="header">
+			<div class="siteLogo">
+				<a href="/">
+                    <img src="/img/site_logo_light.png">
+                </a>
 			</div>
 			<div class="site">
 					<h1>
@@ -37,6 +58,15 @@
                 </h2>
 			</div>
 		</div>
+        <label class="ECM_CheckboxInput">
+            <input class="ECM_CheckboxInput-Input" type="checkbox">
+            <span class="ECM_CheckboxInput-DummyInput">
+
+            </span>
+            <span class="ECM_CheckboxInput-LabelText">ダークモード
+
+            </span>
+        </label>
 
 
 
@@ -84,7 +114,7 @@
             {
                 var NewNum;
                 if(Num < 10)
-                {// 桁数が1桁だったら先頭に0を加えて2桁に調整する
+                {//桁数が1桁だったら0足して2桁に
                     NewNum = "0" + Num;
                 }
                 else 
