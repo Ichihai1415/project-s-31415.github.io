@@ -27,125 +27,116 @@ body /*通常色*/
   background: rgb(0,0,30);
   color: rgb(240,240,255)
 }
-.ECM_CheckboxInput
+
+
+.header/*ヘッダー*/
 {
-    padding: 12px 8px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  .ECM_CheckboxInput-Input
-  {
-    margin: 0;
-    width: 0;
-    opacity: 0;
-  }
-  .ECM_CheckboxInput:hover
-  {
-    background: rgba(0,0,0,.05) !important;
-  }
-  .ECM_CheckboxInput:hover > .ECM_CheckboxInput-DummyInput
-  {
-    transform: scale(1.1);
-  }
-  .ECM_CheckboxInput-Input:focus + .ECM_CheckboxInput-DummyInput
-  {
-    transform: scale(1.1);
-  }
-    .ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput
-  {
-    background: rgb(125, 0, 250);
-  }
-  .ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput::before
-  {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 35%;
-    height: 4px;
-    border-radius: 2px;
-    transform: translate(-6px, 5px) rotateZ(-135deg);
-    transform-origin: 2px 2px;
-    background: #FFFFFF;
-  }
-  .ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput::after
-  {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 70%;
-    height: 4px;
-    border-radius: 2px;
-    transform: translate(-6px, 5px) rotateZ(-45deg);
-    transform-origin: 2px 2px;
-    background: #FFFFFF;
-  }
-  .ECM_CheckboxInput-DummyInput
-  {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 32px;
-    height: 32px;
-    border: solid 2px transparent;
-    background: rgba(200, 200, 200, .15);
-    border-radius: 50%;
-    transition: all .15s linear;
-  }
-  .ECM_CheckboxInput-LabelText
-  {
-    margin-left: 12px;
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-  }
+  margin-top: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgb(30,30,30);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header_inner/*ヘッダー内部*/
+{
+  max-width: 1152px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header_logo
+{
+  flex: none;
+  width: 150px;
+  height: 75px;
+  left: 10;
+}
+.header_navgroup
+{
+  margin-left: auto;
+  display: flex;
+  flex: none;
+}
+.header_navgroup > * + */*間開ける*/
+{
+  margin-left: 30px;
+}
+.header_navitem
+{
+  font-size: 30px;
+  color: #fff;
+}
+
+
+.SwitchButton /*root*/
+{
+  position: relative;
+  display: flex;
+  text-align: right;
+  margin: auto;
+  flex-direction: row-reverse;
+  width: 1000;
+  height: 10;
+}
+
+.SwitchInput 
+{
+  width: 0;/*チェックボックスを消す*/
+  z-index: 5;
+  cursor: pointer;
+}
+
+.SwitchLabel/*後ろのやつ*/
+{
   
-  
-  .header
-  {
-    margin-top: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
-    .header_inner
-    {
-      max-width: 1152px;
-      width: 90%;
-      height: 100%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
-    .header_logo
-    {
-      flex: none;
-      width: auto;
-      height: 35px;
-    }
-    .header_navgroup
-    {
-      margin-left: auto;
-      display: flex;
-      flex: none;
-    }
-    .header_navgroup > * + *
-    {
-      margin-left: 60px;
-    }
-    .header__navitem
-    {
-      font-size: 16px;
-      color: #fff;
-    }
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  position: relative;
+  display: inline-block;
+  border-radius: 20px;
+  transition: .75s;
+  box-sizing: border-box;
+  cursor: pointer;
+
+}
+
+.SwitchLabel:after/*前のやつ*/
+{
+
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: .5s;
+}
+
+.SwitchInput:checked + .SwitchLabel
+{
+  background-color: rgb(80, 240, 80);
+}
+
+.SwitchInput:checked + .SwitchLabel:after /*ボタン押下で右に移動*/
+{
+  left: 25px;
+}
+
+
+
+.DarkmodeSwitchText
+{
+
+  font-size: 20px;
+}

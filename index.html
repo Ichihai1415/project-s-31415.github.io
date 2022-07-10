@@ -28,19 +28,44 @@
     </head>
     <body>
         <div class="header">
-            <div class="header__inner">
-            <img class="header__logo" src="https://placehold.jp/bbbbbb/ffffff/100x35.png?text=LOGO">
-            <div class="header__navgroup">
-            <div class="header__navitem">TOP</div>
-            <div class="header__navitem">ABOUT</div>
-            <div class="header__navitem">BLOG</div>
-            <div class="header__navitem">CONTACT</div>
+            <div class="header_inner">
+                <img class="header_logo" src="img/site_logo.png">
+                <div class="header_navgroup">
+                    <div class="header_navitem">
+                        TOP
+                    </div>
+                    <div class="header_navitem">
+                        ABOUT
+                    </div>
+                    <div class="header_navitem">
+                        BLOG
+                    </div>
+                    <div class="header_navitem">
+                        CONTACT
+                    </div>
+                </div>
             </div>
-            </div>
+        </div>
+        <br><br><br><br><br>
+        <div id="Darkmode" class="SwitchButton">
+            <div class="DarkmodeSwitch">
+                <!--チェックボックスとして表示-->
+                <input id="Switch" class="SwitchInput" type="checkbox">
+                <!--スイッチ本体-->
+                <label for="Switch" class="SwitchLabel">
+                </label>
+                <div class="DarkmodeSwitchText">
+                    ダークモード
+                </div>
             </div>
 
 
-            
+                
+        </div>
+
+                <!--
+
+        
         <div class="header">
 			<div class="siteLogo">
 				<a href="/">
@@ -58,6 +83,10 @@
                 </h2>
 			</div>
 		</div>
+        -->
+        <!--
+
+        
         <label class="ECM_CheckboxInput">
             <input class="ECM_CheckboxInput-Input" type="checkbox">
             <span class="ECM_CheckboxInput-DummyInput">
@@ -75,8 +104,9 @@
 
 
 
-
+    -->
         <!--ダークモードチェックボックス-->
+        <!--
         <input id="darkmode" type="checkbox"> ダークモード
         <h2>
             super homepage.
@@ -85,7 +115,16 @@
         </h2>
 
 
+    -->
+        <script>
+            var IsDarkmode = document.cookie;
+            
 
+
+
+            document.cookie = cookievalue;
+            
+        </script>
 
 
 
@@ -93,7 +132,7 @@
 
         <script>//ダークモード
             //チェックボックスの取得
-            const check = document.querySelector("#darkmode");
+            const check = document.querySelector("#DarkModeCheckBox");
             //チェックした時
             check.addEventListener("change", () => 
             {
