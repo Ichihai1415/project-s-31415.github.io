@@ -1,29 +1,42 @@
-:root /*基本カラー*/
+body /*通常色*/
 {
-  --main-text: rgb(0,0,30);
-  --main-bg: rgb(240,240,255);
+  color: rgb(0,0,30);
+  background-color: rgb(240,240,255);
+}
+.Twitter_Dark
+{
+  display: none;
 }
 @media (prefers-color-scheme: dark) /*ダークモードの場合(設定から判定)*/
 {
-  :root 
+  body 
   {
-    --main-text: rgb(240,240,255);
-    --main-bg: rgb(0,0,30);
+    color: rgb(240,240,255);
+    background-color: rgb(0,0,30);
+  }
+  .Twitter_Light
+  {
+    display: none;
+  }
+  .Twitter_Dark
+  {
+    display: block;
   }
 }
-body /*通常色*/
+.LightModeColor/*チェックボックスで*/
 {
-  color: var(--main-text);
-  background-color: var(--main-bg);
-}
-.lighttheme/*チェックボックスで*/
-{
+  transition: .5s;
   background: rgb(240,240,255);
   color: rgb(0,0,30);
   
 }
-.darktheme
+.Twitter_Light
 {
+  display: none;
+}
+.DarkModeColor
+{
+  transition: .5s;
   background: rgb(0,0,30);
   color: rgb(240,240,255)
 }
@@ -102,7 +115,7 @@ body /*通常色*/
   position: relative;
   display: inline-block;
   border-radius: 20px;
-  transition: .75s;
+  transition: .5s;
   box-sizing: border-box;
   cursor: pointer;
 
@@ -118,7 +131,8 @@ body /*通常色*/
   border-radius: 100%;
   left: 0;
   z-index: 2;
-  background: #fff;
+  background-image: url("img/Icon_sun.jpg");
+  background-size: contain;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: .5s;
 }
@@ -131,8 +145,20 @@ body /*通常色*/
 .SwitchInput:checked + .SwitchLabel:after /*ボタン押下で右に移動*/
 {
   left: 25px;
+  background-image: url("img/Icon_moon.jpg");
 }
-
+@media (prefers-color-scheme: dark) 
+{
+  .SwitchInput:checked + .SwitchLabel
+  {
+    background-color: rgb(80, 240, 80);
+  }
+  .SwitchInput:checked + .SwitchLabel:after /*ボタン押下で右に移動*/
+  {
+    left: 25px;
+    background-image: url("img/Icon_moon.jpg");
+  }
+}
 
 
 .DarkmodeSwitchText

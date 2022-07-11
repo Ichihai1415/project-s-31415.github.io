@@ -11,9 +11,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!--サーバーに公開した時
-            <meta property="og:url" content="https://projects31415.jp/index.html">
-        -->
+        <meta property="og:url" content="https://projects31415.jp/index.html">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Project-S's website">
         <meta property="og:description" content="Project-S's website.">
@@ -47,43 +45,26 @@
             </div>
         </div>
         <br><br><br><br><br>
-        <div id="Darkmode" class="SwitchButton">
+        <div id="Darkmode_" class="SwitchButton">
             <div class="DarkmodeSwitch">
                 <!--チェックボックスとして表示-->
-                <input id="Switch" class="SwitchInput" type="checkbox">
+                <input id="DarkmodeSwitch" class="SwitchInput" type="checkbox" checked>
                 <!--スイッチ本体-->
-                <label for="Switch" class="SwitchLabel">
+                <label for="DarkmodeSwitch" class="SwitchLabel">
                 </label>
                 <div class="DarkmodeSwitchText">
                     ダークモード
                 </div>
             </div>
-
-
-                
         </div>
 
-                <!--
 
         
-        <div class="header">
-			<div class="siteLogo">
-				<a href="/">
-                    <img src="/img/site_logo_light.png">
-                </a>
-			</div>
-			<div class="site">
-					<h1>
-                        Project-S's site
-                    </h1>
-			</div>
 			<div class="info">
                 <h2 id="RealtimeClock">
                     Loading...
                 </h2>
 			</div>
-		</div>
-        -->
         <!--
 
         
@@ -100,7 +81,7 @@
 
 
 
-
+        
 
 
 
@@ -116,15 +97,17 @@
 
 
     -->
-        <script>
-            var IsDarkmode = document.cookie;
-            
 
-
-
-            document.cookie = cookievalue;
-            
-        </script>
+        <div class="Twitter_Light">
+            <a class="twitter-timeline" href="https://twitter.com/ProjectS31415_1?ref_src=twsrc%5Etfw">
+                Tweets by ProjectS31415_1
+            </a> 
+        </div>
+        <div class="Twitter_Dark">
+            <a class="twitter-timeline" href="https://twitter.com/ProjectS31415_1?ref_src=twsrc%5Etfw" data-theme="dark">
+                Tweets by ProjectS31415_1
+            </a> 
+        </div>
 
 
 
@@ -132,19 +115,19 @@
 
         <script>//ダークモード
             //チェックボックスの取得
-            const check = document.querySelector("#DarkModeCheckBox");
+            const Checked = document.querySelector("#DarkmodeSwitch");
             //チェックした時
-            check.addEventListener("change", () => 
+            Checked.addEventListener("change", () => 
             {
-                if (check.checked == true)
+                if (Checked.checked == true)
                 {//ダークモード
-                    document.body.classList.remove("lighttheme");
-                    document.body.classList.add("darktheme");
+                    document.body.classList.remove("LightModeColor");
+                    document.body.classList.add("DarkModeColor");
                 }
                 else
                 {//ライトモード
-                    document.body.classList.remove("darktheme");
-                    document.body.classList.add("lighttheme");
+                    document.body.classList.remove("DarkModeColor");
+                    document.body.classList.add("LightModeColor");
                 }
             });
         </script>
@@ -173,5 +156,9 @@
             }
             setInterval('ShowClock()',1000);//繰り返し(1000ms)
         </script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+            //Twitter埋め込みjs
+        </script>
+
     </body>
 </html>
