@@ -14,12 +14,15 @@
         <meta property="og:url" content="https://projects31415.jp/index.html">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Project-S's website">
-        <meta property="og:description" content="Project-S's website.">
-        <meta property="og:site_name" content="">
-        <meta property="og:image" content="">
+        <meta property="og:description" content="Project-Sのウェブサイトです。">
+        <meta property="og:site_name" content="Project-S's website">
+        <meta property="og:image" content="img/PSicon.jpg">
         <meta property="og:locate" content="ja_JP">
-        <meta property="twitter:card" content="">
+        <meta property="twitter:card" content="summary">
         <meta property="twitter:site" content="ProjectS31415_1">
+        <meta name="twitter:title" content="Project-S's website">
+        <meta name="twitter:description" content="Project-Sのウェブサイトです。">
+        <meta name="twitter:image" content="img/site_logo.png">
         <title>
             ようこそ！@Project-S's website
         </title>
@@ -48,7 +51,7 @@
         <div id="Darkmode_" class="SwitchButton">
             <div class="DarkmodeSwitch">
                 <!--チェックボックスとして表示-->
-                <input id="DarkmodeSwitch" class="SwitchInput" type="checkbox" checked>
+                <input id="DarkmodeSwitch" class="SwitchInput" type="checkbox">
                 <!--スイッチ本体-->
                 <label for="DarkmodeSwitch" class="SwitchLabel">
                 </label>
@@ -67,36 +70,10 @@
 			</div>
         <!--
 
-        
-        <label class="ECM_CheckboxInput">
-            <input class="ECM_CheckboxInput-Input" type="checkbox">
-            <span class="ECM_CheckboxInput-DummyInput">
-
-            </span>
-            <span class="ECM_CheckboxInput-LabelText">ダークモード
-
-            </span>
-        </label>
-
-
-
-
-        
-
-
-
     -->
-        <!--ダークモードチェックボックス-->
-        <!--
-        <input id="darkmode" type="checkbox"> ダークモード
-        <h2>
-            super homepage.
-            <br>
-            ↑???????
-        </h2>
 
 
-    -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <div class="Twitter_Light">
             <a class="twitter-timeline" href="https://twitter.com/ProjectS31415_1?ref_src=twsrc%5Etfw">
@@ -131,6 +108,27 @@
                 }
             });
         </script>
+        <script>
+            function AutoChange()
+            {
+
+                if(document.body.classList.contains("DarkModeColor") == true)
+            {
+                document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked = true;
+            }
+            if(document.body.classList.contains("DarkModeColor") == true && document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked == false)
+            {
+                document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked = true;
+            }
+            if(document.body.classList.contains("LightModeColor") == true && document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked == true)
+            {
+                document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked = false;
+            }
+        }
+            setInterval('AutoChange()',1000);//繰り返し(1000ms)
+
+        </script>
+
         <script>//時計
             function Puls0(Num) 
             {

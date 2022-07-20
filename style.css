@@ -1,15 +1,11 @@
-body /*通常色*/
+body /*root通常色*/
 {
   color: rgb(0,0,30);
   background-color: rgb(240,240,255);
 }
-.Twitter_Dark
-{
-  display: none;
-}
 @media (prefers-color-scheme: dark) /*ダークモードの場合(設定から判定)*/
 {
-  body 
+  body
   {
     color: rgb(240,240,255);
     background-color: rgb(0,0,30);
@@ -22,7 +18,29 @@ body /*通常色*/
   {
     display: block;
   }
+  
 }
+
+.Twitter_Light
+{
+  display: none;
+}
+.Twitter_Dark
+{
+  display: none;
+}
+.Twitter_Light + .SwitchLabel:after 
+{
+  display: none;
+}
+.Twitter_Dark + .SwitchLabel:after 
+{
+  display: block;
+}
+
+
+
+
 .LightModeColor/*チェックボックスで*/
 {
   transition: .5s;
@@ -54,6 +72,7 @@ body /*通常色*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 10;/*最前面 一番大きく*/
 }
 .header_inner/*ヘッダー内部*/
 {
@@ -63,6 +82,8 @@ body /*通常色*/
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background: rgb(30,30,30);
+
 }
 .header_logo
 {
@@ -70,21 +91,26 @@ body /*通常色*/
   width: 150px;
   height: 75px;
   left: 10;
+  background: rgb(30,30,30);
 }
 .header_navgroup
 {
   margin-left: auto;
   display: flex;
   flex: none;
+  background: rgb(30,30,30);
 }
 .header_navgroup > * + */*間開ける*/
 {
   margin-left: 30px;
+  
 }
 .header_navitem
 {
   font-size: 30px;
   color: #fff;
+  background: rgb(30,30,30);
+
 }
 
 
@@ -123,7 +149,6 @@ body /*通常色*/
 
 .SwitchLabel:after/*前のやつ*/
 {
-
   content: "";
   position: absolute;
   width: 25px;
@@ -147,18 +172,7 @@ body /*通常色*/
   left: 25px;
   background-image: url("img/Icon_moon.jpg");
 }
-@media (prefers-color-scheme: dark) 
-{
-  .SwitchInput:checked + .SwitchLabel
-  {
-    background-color: rgb(80, 240, 80);
-  }
-  .SwitchInput:checked + .SwitchLabel:after /*ボタン押下で右に移動*/
-  {
-    left: 25px;
-    background-image: url("img/Icon_moon.jpg");
-  }
-}
+
 
 
 .DarkmodeSwitchText
