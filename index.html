@@ -1,162 +1,150 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <!--
+  <head>
+    <!--
 			Welcome to Project-S's website!!!!!!!
 			ソースを見てもなにもありませんよ(多分)。
-            コード書くのが下手なのは許してください。
-            改行はC#の癖なので気にしないでください。
-            コメントで解説してるので参考？にどうぞ。
+      コード書くのが下手なのは許してください。
+      改行はC#の癖なので気にしないでください。
+      コメントで解説してるので参考？にどうぞ。
 		-->
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta property="og:url" content="https://projects31415.jp/index.html">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Project-S's website">
-        <meta property="og:description" content="Project-Sのウェブサイトです。">
-        <meta property="og:site_name" content="Project-S's website">
-        <meta property="og:image" content="img/PSicon.jpg">
-        <meta property="og:locate" content="ja_JP">
-        <meta property="twitter:card" content="summary">
-        <meta property="twitter:site" content="ProjectS31415_1">
-        <meta name="twitter:title" content="Project-S's website">
-        <meta name="twitter:description" content="Project-Sのウェブサイトです。">
-        <meta name="twitter:image" content="img/site_logo.png">
-        <title>
-            ようこそ！@Project-S's website
-        </title>
-    </head>
-    <body>
-        <div class="header">
-            <div class="header_inner">
-                <img class="header_logo" src="img/site_logo.png">
-                <div class="header_navgroup">
-                    <div class="header_navitem">
-                        TOP
-                    </div>
-                    <div class="header_navitem">
-                        ABOUT
-                    </div>
-                    <div class="header_navitem">
-                        BLOG
-                    </div>
-                    <div class="header_navitem">
-                        CONTACT
-                    </div>
-                </div>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:url" content="https://projects31415.jp/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Project-S's website">
+    <meta property="og:description" content="Project-Sのウェブサイトです。">
+    <meta property="og:site_name" content="Project-S's website">
+    <meta property="og:image" content="img/PSicon.jpg">
+    <meta property="og:locate" content="ja_JP">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="ProjectS31415_1">
+    <meta name="twitter:title" content="Project-S's website">
+    <meta name="twitter:description" content="Project-Sのウェブサイトです。">
+    <meta name="twitter:image" content="img/site_logo.png">
+    <title>
+      ようこそ！@Project-S's website
+    </title>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <div class="header">
+      <div class="header_inner">
+        <img class="header_logo" src="img/site_logo.png">
+        <div class="header_navgroup">
+          <a href="/" class="header_navitem">
+            あ
+          </a>
+        </div>
+        <div class="header_navgroup2">
+          <div class="DarkmodeSwitch">
+            <!--チェックボックスとして表示-->
+            <input id="DarkmodeSwitchButton" class="SwitchInput" type="checkbox">
+            <!--スイッチ本体-->
+            <label for="DarkmodeSwitchButton" class="SwitchLabel"></label>
+            ダークモード
+          </div>
+          <div class="NowTimeDisplayRoot">
+            <div id="RealtimeClock" class="NowTimeDisplay">
+          Loading...
             </div>
+          </div>
         </div>
-        <br><br><br><br><br>
-        <div id="Darkmode_" class="SwitchButton">
-            <div class="DarkmodeSwitch">
-                <!--チェックボックスとして表示-->
-                <input id="DarkmodeSwitch" class="SwitchInput" type="checkbox">
-                <!--スイッチ本体-->
-                <label for="DarkmodeSwitch" class="SwitchLabel">
-                </label>
-                <div class="DarkmodeSwitchText">
-                    ダークモード
-                </div>
-            </div>
-        </div>
+      </div>
+    </div>
+      
+    <!--
+
+  -->
 
 
-        
-			<div class="info">
-                <h2 id="RealtimeClock">
-                    Loading...
-                </h2>
-			</div>
-        <!--
+  <br><br><br><br><br><br><br><br><br><br><br>
+    <div class="TwitterImput">
+      <!--
+        Viewのときのみ表示
+        jsで切り替え
+      -->
+      <div class="Twitter_Light_View">
+        <a class="twitter-timeline" href="https://twitter.com/ProjectS31415_1?ref_src=twsrc%5Etfw">
+          Tweets by ProjectS31415_1
+        </a> 
+      </div>
+      <div class="Twitter_Dark_UnView">
+        <a class="twitter-timeline" href="https://twitter.com/ProjectS31415_1?ref_src=twsrc%5Etfw" data-theme="dark">
+          Tweets by ProjectS31415_1
+        </a> 
+      </div>
 
-    -->
-
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-        <div class="Twitter_Light">
-            <a class="twitter-timeline" href="https://twitter.com/ProjectS31415_1?ref_src=twsrc%5Etfw">
-                Tweets by ProjectS31415_1
-            </a> 
-        </div>
-        <div class="Twitter_Dark">
-            <a class="twitter-timeline" href="https://twitter.com/ProjectS31415_1?ref_src=twsrc%5Etfw" data-theme="dark">
-                Tweets by ProjectS31415_1
-            </a> 
-        </div>
+    </div>
+    
 
 
 
 
 
-        <script>//ダークモード
-            //チェックボックスの取得
-            const Checked = document.querySelector("#DarkmodeSwitch");
-            //チェックした時
-            Checked.addEventListener("change", () => 
-            {
-                if (Checked.checked == true)
-                {//ダークモード
-                    document.body.classList.remove("LightModeColor");
-                    document.body.classList.add("DarkModeColor");
-                }
-                else
-                {//ライトモード
-                    document.body.classList.remove("DarkModeColor");
-                    document.body.classList.add("LightModeColor");
-                }
-            });
-        </script>
-        <script>
-            function AutoChange()
-            {
-
-                if(document.body.classList.contains("DarkModeColor") == true)
-            {
-                document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked = true;
-            }
-            if(document.body.classList.contains("DarkModeColor") == true && document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked == false)
-            {
-                document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked = true;
-            }
-            if(document.body.classList.contains("LightModeColor") == true && document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked == true)
-            {
-                document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked = false;
-            }
+    <script>//ダークモード
+      //チェックボックスの取得
+      const Checked = document.querySelector("#DarkmodeSwitchButton");
+      //チェックした時
+      Checked.addEventListener("change", () => 
+      {
+        if (Checked.checked == true)
+        {//ダークモード
+          document.body.classList.remove("LightModeColor");
+          document.body.classList.add("DarkModeColor");
+          var TwitterLightOFF = document.querySelector("Twitter_Light_View");
+          TwitterLightOFF.className = "Twitter_Light_UnView";
+          var TwitterDarkON = document.querySelector("Twitter_Dark_UnView");
+          TwitterDarkON.className = "Twitter_Dark_View";
         }
-            setInterval('AutoChange()',1000);//繰り返し(1000ms)
+        else
+        {//ライトモード
+          document.body.classList.remove("DarkModeColor");
+          document.body.classList.add("LightModeColor");
+          var TwitterLightON = document.querySelector("Twitter_Light_UnView");
+          TwitterLightON.className = "Twitter_Light_View";
+          var TwitterDarkOFF = document.querySelector("Twitter_Dark_View");
+          TwitterDarkOFF.className = "Twitter_Dark_UnView";
+        }
 
-        </script>
+      });
+    </script>
+    <script>//読み込み時、設定がダークモードの時チェックボックスにチェックする
+      if(window.matchMedia('(prefers-color-scheme: dark)').matches == true)
+      {
+        document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked = true;
+        var TwitterLightOFF = document.querySelector("Twitter_Light_View");
+        TwitterLightOFF.className = "Twitter_Light_UnView";
+        var TwitterDarkON = document.querySelector("Twitter_Dark_UnView");
+        TwitterDarkON.className = "Twitter_Dark_View";
+      }
+    </script>
 
-        <script>//時計
-            function Puls0(Num) 
-            {
-                var NewNum;
-                if(Num < 10)
-                {//桁数が1桁だったら0足して2桁に
-                    NewNum = "0" + Num;
-                }
-                else 
-                { 
-                    NewNum = Num; 
-                }
-                return NewNum;
-            }
-            function ShowClock() 
-            {
-                var NowTime = new Date();
-                var NowTimeHour = Puls0(NowTime.getHours());
-                var NowTimeMin  = Puls0(NowTime.getMinutes());
-                var NowTimeSec  = Puls0(NowTime.getSeconds());
-                var NowTimeString = "NowTime:" + NowTimeHour + ":" + NowTimeMin + ":" + NowTimeSec;
-                document.getElementById("RealtimeClock").innerHTML = NowTimeString;
-            }
-            setInterval('ShowClock()',1000);//繰り返し(1000ms)
-        </script>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
-            //Twitter埋め込みjs
-        </script>
+    <script>//時計
+      function Puls0(Num) 
+      {
+        var NewNum = Num;
+        if(Num < 10)
+        {//桁数が1桁だったら0足して2桁に
+          NewNum = "0" + Num;
+        }
+        return NewNum;
+      }
+      function ShowClock() 
+      {
+        var NowTime = new Date();
+        var NowTimeHour = Puls0(NowTime.getHours());
+        var NowTimeMin  = Puls0(NowTime.getMinutes());
+        var NowTimeSec  = Puls0(NowTime.getSeconds());
+        var NowTimeString = "NowTime:" + NowTimeHour + ":" + NowTimeMin + ":" + NowTimeSec;
+        document.getElementById("RealtimeClock").innerHTML = NowTimeString;
+      }
+      setInterval('ShowClock()',1000);//繰り返し(1000ms)
+    </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+      //Twitter埋め込みjs
+    </script>
 
-    </body>
+  </body>
 </html>

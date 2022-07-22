@@ -1,8 +1,11 @@
-body /*root通常色*/
+body /*root*/
 {
+  margin-top: 105px;
+  transition: .5s;
   color: rgb(0,0,30);
   background-color: rgb(240,240,255);
 }
+
 @media (prefers-color-scheme: dark) /*ダークモードの場合(設定から判定)*/
 {
   body
@@ -10,74 +13,55 @@ body /*root通常色*/
     color: rgb(240,240,255);
     background-color: rgb(0,0,30);
   }
-  .Twitter_Light
-  {
-    display: none;
-  }
-  .Twitter_Dark
-  {
-    display: block;
-  }
-  
-}
-
-.Twitter_Light
-{
-  display: none;
-}
-.Twitter_Dark
-{
-  display: none;
-}
-.Twitter_Light + .SwitchLabel:after 
-{
-  display: none;
-}
-.Twitter_Dark + .SwitchLabel:after 
-{
-  display: block;
 }
 
 
 
 
-.LightModeColor/*チェックボックスで*/
+
+.LightModeColor/*チェックボックスでbodyに上書き*/
 {
-  transition: .5s;
   background: rgb(240,240,255);
   color: rgb(0,0,30);
-  
-}
-.Twitter_Light
-{
-  display: none;
 }
 .DarkModeColor
 {
-  transition: .5s;
   background: rgb(0,0,30);
   color: rgb(240,240,255)
 }
+.Twitter_Light_UnView
+{
+  display: none;
+}
+.Twitter_Dark_UnView
+{
+  display: none;
+}
+
+
 
 
 .header/*ヘッダー*/
 {
-  margin-top: 10px;
-  position: fixed;
+  
+  margin-top: 2px;
+  position: fixed;/*常時上に固定*/
   top: 0;
   left: 0;
   width: 100%;
   height: 100px;
   background: rgb(30,30,30);
+  color: #fff;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 10;/*最前面 一番大きく*/
+  z-index: 10;/*最前面 !一番大きく*/
 }
 .header_inner/*ヘッダー内部*/
 {
   max-width: 1152px;
-  width: 90%;
+  width: 95%;
   height: 100%;
   display: flex;
   justify-content: flex-start;
@@ -90,7 +74,6 @@ body /*root通常色*/
   flex: none;
   width: 150px;
   height: 75px;
-  left: 10;
   background: rgb(30,30,30);
 }
 .header_navgroup
@@ -100,41 +83,31 @@ body /*root通常色*/
   flex: none;
   background: rgb(30,30,30);
 }
-.header_navgroup > * + */*間開ける*/
-{
-  margin-left: 30px;
-  
-}
 .header_navitem
 {
+  text-decoration: none;
+  margin: 0px 15px;
   font-size: 30px;
   color: #fff;
   background: rgb(30,30,30);
-
 }
 
 
-.SwitchButton /*root*/
+.DarkmodeSwitch /*root*/
 {
-  position: relative;
+  font-size: 20px;
   display: flex;
-  text-align: right;
-  margin: auto;
   flex-direction: row-reverse;
-  width: 1000;
+  width: 180px;
   height: 10;
 }
-
 .SwitchInput 
 {
   width: 0;/*チェックボックスを消す*/
-  z-index: 5;
   cursor: pointer;
 }
-
 .SwitchLabel/*後ろのやつ*/
 {
-  
   width: 50px;
   height: 25px;
   background: #ccc;
@@ -144,7 +117,6 @@ body /*root通常色*/
   transition: .5s;
   box-sizing: border-box;
   cursor: pointer;
-
 }
 
 .SwitchLabel:after/*前のやつ*/
@@ -172,11 +144,12 @@ body /*root通常色*/
   left: 25px;
   background-image: url("img/Icon_moon.jpg");
 }
-
-
-
-.DarkmodeSwitchText
-{
-
-  font-size: 20px;
+.NowTimeDisplay
+{  
+  margin-top: 4px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #202020;
+  width: 180px;
+  text-align: center;
 }
