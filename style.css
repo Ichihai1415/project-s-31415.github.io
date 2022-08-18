@@ -14,32 +14,61 @@ body /*root*/
     background-color: rgb(0,0,30);
   }
 }
-
-
-
-
-
 .LightModeColor/*チェックボックスでbodyに上書き*/
 {
-  background: rgb(240,240,255);
   color: rgb(0,0,30);
+  background: rgb(240,240,255);
 }
 .DarkModeColor
 {
+  color: rgb(240,240,255);
   background: rgb(0,0,30);
-  color: rgb(240,240,255)
 }
-.Twitter_Light_UnView
+
+.Main/*メイン画面*/
 {
-  display: none;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgb(30,30,30);
 }
-.Twitter_Dark_UnView
+.Main_Main/*メイン画面のメイン画面(リンク等以外)*/
 {
-  display: none;
+  max-width: 700px;
+}
+.header_navgroup
+{
+  margin-left: auto;
+  display: flex;
+  flex: none;
+  background: rgb(30,30,30);
+}
+.header_navitem
+{
+  text-decoration: none;
+  margin: 0px 15px;
+  font-size: 30px;
+  color: #fff;
+  background: rgb(30,30,30);
 }
 
+@media screen and (max-width: 640px)
+{
+  .Main_Links
+  {
+    display: none;
+  } 
+}
+@media screen and (min-width: 320px) and (max-width: 640px)
+{
 
-
+}
 
 .header/*ヘッダー*/
 {
@@ -152,4 +181,18 @@ body /*root*/
   background-color: #202020;
   width: 180px;
   text-align: center;
+}
+
+.Border
+{
+  border: 3px outset rgb(127, 127, 127);
+  top: 5px;
+  left: 5px;
+  width: 95%;
+}
+.Border_Item
+{
+  top: 5px;
+  left: 5px;
+  width: 95%;
 }

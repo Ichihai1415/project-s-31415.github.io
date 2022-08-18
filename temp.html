@@ -3,18 +3,17 @@
   <head>
     <!--
 			Yokosou to Project-S's website!JQuake最高!
-      コードが汚いことで有名(違)な私の謎なページです。
-      c#的改行スタイルです。
+      コードが汚いことで有名(違)な私の謎なサイトです。
+      c#的改行スタイルです。最初が大文字なのは趣味です。
 		-->
-    <meta http-equiv="default-style" content="style.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:url" content="https://project-s-31415.github.io/index.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Project-S's website">
-    <meta property="og:description" content="いちはい(Project-S)のウェブサイトです。">
-    <meta property="og:site_name" content="ichihai(Project-S)'s website">
+    <meta property="og:description" content="Project-Sのウェブサイトです。">
+    <meta property="og:site_name" content="Project-S's website">
     <meta property="og:image" content="img/PSicon.jpg">
     <meta property="og:locate" content="ja_JP">
     <meta property="twitter:card" content="summary">
@@ -31,7 +30,6 @@
     <div class="header">
       <div class="header_inner">
         <img class="header_logo" src="img/site_logo.png">
-        <!--svg?svgってなんすか?(ひろゆき感)-->
         <div class="header_navgroup">
           <a href="" class="header_navitem">
             TOP
@@ -54,10 +52,6 @@
           <div class="NowTimeDisplayRoot">
             <div id="RealtimeClock" class="NowTimeDisplay">
           Loading...
-  <noscript>
-    取得できません
-  </noscript>
-
             </div>
           </div>
         </div>
@@ -67,48 +61,23 @@
     <!--
 
   -->
-  
-  <noscript>
-    <h1 style="color:red">
-      JavaScriptが有効になっていません。一部の挙動が正常に動作しない可能性があります。
-    </h1>
-
-      </noscript>
-
-
-
-
-<div id="Infos" class="Border">
-  お知らせ<br>
-  2022/08/07 
-  <a href="" class="Border_Item">
-    Twitter開設2周年<br>
-  </a>
-</div>
-
-
-
-
   <br><br><br><br><br><br><br><br><br><br><br>
   <br><br><br><br><br><br><br><br><br><br><br>
   <br><br><br><br><br><br><br><br><br><br><br>
-    <div class="Twitter">
+    <div class="TwitterImput">
       <!--
-        どっちかDisplay:noneで消す
+        Viewのときのみ表示
+        jsで切り替え
       -->
-      <div class="Twitter_Light" id="Twitter_Light">
+      <div class="Twitter_Light_View">
         <a class="twitter-timeline" href="https://twitter.com/ProjectS31415_1?ref_src=twsrc%5Etfw">
           Tweets by ProjectS31415_1
-          
         </a> 
       </div>
-      <div class="Twitter_Dark" id="Twitter_Dark">
+      <div class="Twitter_Dark_UnView">
         <a class="twitter-timeline" href="https://twitter.com/ProjectS31415_1?ref_src=twsrc%5Etfw" data-theme="dark">
           Tweets by ProjectS31415_1
         </a> 
-        <noscript>
-          JavaScriptが有効になっていません。
-        </noscript>
       </div>
 
     </div>
@@ -118,41 +87,40 @@
 
 
     <script>//ダークモード
+      //チェックボックスの取得
       const Checked = document.querySelector("#DarkmodeSwitchButton");
-      let Twitter_Light = document.getElementById('Twitter_Light');
-  let Twitter_Dark = document.getElementById('Twitter_Dark');
+      //チェックした時
       Checked.addEventListener("change", () => 
       {
         if (Checked.checked == true)
         {//ダークモード
           document.body.classList.remove("LightModeColor");
           document.body.classList.add("DarkModeColor");
-          Twitter_Light.setAttribute('style', 'Display:none');
-        Twitter_Dark.setAttribute('style', 'Display:block');
+          var TwitterLightOFF = document.querySelector("Twitter_Light_View");
+          TwitterLightOFF.className = "Twitter_Light_UnView";
+          var TwitterDarkON = document.querySelector("Twitter_Dark_UnView");
+          TwitterDarkON.className = "Twitter_Dark_View";
         }
         else
         {//ライトモード
           document.body.classList.remove("DarkModeColor");
           document.body.classList.add("LightModeColor");
-          Twitter_Light.setAttribute('style', 'Display:block');
-        Twitter_Dark.setAttribute('style', 'Display:none');
+          var TwitterLightON = document.querySelector("Twitter_Light_UnView");
+          TwitterLightON.className = "Twitter_Light_View";
+          var TwitterDarkOFF = document.querySelector("Twitter_Dark_View");
+          TwitterDarkOFF.className = "Twitter_Dark_UnView";
         }
 
       });
     </script>
     <script>//読み込み時、設定がダークモードの時チェックボックスにチェックする
-  let Twitter_Light_First = document.getElementById('Twitter_Light');
-  let Twitter_Dark_First = document.getElementById('Twitter_Dark');
-  if(window.matchMedia('(prefers-color-scheme: dark)').matches == true)
+      if(window.matchMedia('(prefers-color-scheme: dark)').matches == true)
       {
         document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked = true;
-        Twitter_Light_First.setAttribute('style', 'Display:none');
-        Twitter_Dark_First.setAttribute('style', 'Display:block');
-      }
-      else
-      {
-        Twitter_Light_First.setAttribute('style', 'Display:block');
-        Twitter_Dark_First.setAttribute('style', 'Display:none');
+        var TwitterLightOFF = document.querySelector("Twitter_Light_View");
+        TwitterLightOFF.className = "Twitter_Light_UnView";
+        var TwitterDarkON = document.querySelector("Twitter_Dark_UnView");
+        TwitterDarkON.className = "Twitter_Dark_View";
       }
     </script>
 
@@ -180,6 +148,8 @@
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
       //Twitter埋め込みjs
     </script>
-
   </body>
 </html>
+<!--
+  お疲れ様でした。
+-->
