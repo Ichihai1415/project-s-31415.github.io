@@ -94,7 +94,6 @@ position: absolute;
   transition: .5s;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100px;
   color: var(--ForeHeader);
@@ -138,11 +137,13 @@ position: absolute;
 .Header_Item
 {
   text-decoration: none;
-  margin: 0px 15px;
+  margin: 0px 10px;
+padding: 0px 5px;
+
   font-size: 30px;
   transition: .5s;
 
-  color: #fff;
+  color: var(--ForeHeader);
   background: var(--BackHeader);
   border: var(--BackHeader) solid;
 
@@ -150,8 +151,8 @@ position: absolute;
 }
 .Header_Item:hover
 {
-  background: rgb(60,60,60);
-  border: rgb(60,60,60) 5px solid;
+  background: rgba(127,127,127,.5);
+  border: rgba(127,127,127,0) solid;
   border-bottom: #0f0 solid;
 
 
@@ -240,6 +241,8 @@ h1,h2
   padding-left: 10px;
   color: var(--ForeHtag);
   background-color: var(--BackHtag);
+  transition: .5s;
+
 }
 h1
 {
@@ -272,11 +275,13 @@ padding: 5px;
 }
 .Content_Link1,.Content_Link2
 {
-color: #fff;
+color: var(--ForeMainLink);
 text-decoration: none;
 padding-left: 5px;
 width: 100%;
 display: block;
+transition: .5s;
+
 }
 .Content_Link1
 {
