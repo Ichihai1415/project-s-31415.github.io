@@ -249,32 +249,32 @@
     <script>
       $(function() 
       {
-    $.ajax(
-    {
-    url: 'info-rss.xml',
-    type: 'GET',
-    dataType: 'XML',
-    cache: false,
-    success: function(data) 
-    {
-      var UpdateTime = $(data).find('lastBuildDate').text();
-      $(data).find("item").each(function(index, item)
-      {
-        var Title = $(item).find('title').text();
-        var Link = $(item).find('link').text();
-        var Description = $(item).find('description').text();
-        var Date = $(item).find('pubDate').text();
-        var Date_ = new Date();
-        Date_ = Date;
-        
-        $('#Infos').append(`${Date_.getFullYear()}/${Date_.getFullMonth()}/${Date_.getFullDate()} <a href="${Link}" class="Border_Item" title="${Description}">${Title}<br></a>`);
+        $.ajax(
+        {
+        url: 'info-rss.xml',
+        type: 'GET',
+        dataType: 'XML',
+        cache: false,
+        success: function(data) 
+        {
+          var UpdateTime = $(data).find('lastBuildDate').text();
+          $(data).find("item").each(function(index, item)
+          {
+            var Title = $(item).find('title').text();
+            var Link = $(item).find('link').text();
+            var Description = $(item).find('description').text();
+            var Dt = $(item).find('pubDate').text();
+            var Dt_ = new Date(Dt);
+            Date_ = Date;
+            
+            $('#Infos').append(`${Date_.getFullYear()}/${Date_.getFullMonth()}/${Date_.getFullDate()} <a href="${Link}" class="Border_Item" title="${Description}">${Title}<br></a>`);
 
-      });
-    },
-    error: function(err) 
-    {
-      console.log(err);
-    }
+          });
+        },
+        error: function(err) 
+        {
+          console.log(err);
+        }
   });
 });
 
