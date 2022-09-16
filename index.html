@@ -249,7 +249,7 @@
     <script>
       $(function() 
       {
-  $.ajax(
+    $.ajax(
     {
     url: 'info-rss.xml',
     type: 'GET',
@@ -257,7 +257,7 @@
     cache: false,
     success: function(data) 
     {
-      var UpdateTime = $(item).find('lastBuildDate').text();
+      var UpdateTime = $(data).find('lastBuildDate').text();
       $(data).find("item").each(function(index, item)
       {
         var Title = $(item).find('title').text();
