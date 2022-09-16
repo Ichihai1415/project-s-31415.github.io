@@ -265,9 +265,9 @@
             var Description = $(item).find('description').text();
             var Dt = $(item).find('pubDate').text();
             var Dt_ = new Date(Dt);
-            Date_ = Date;
+            //Date_ = Date;
             
-            $('#Infos').append(`${Date_.getFullYear()}/${Date_.getFullMonth()}/${Date_.getFullDate()} <a href="${Link}" class="Border_Item" title="${Description}">${Title}<br></a>`);
+            $('#Infos').append(`${Dt_.getFullYear()}/${Dt_.getFullMonth()}/${Dt_.getFullDate()} <a href="${Link}" class="Border_Item" title="${Description}">${Title}<br></a>`);
 
           });
         },
